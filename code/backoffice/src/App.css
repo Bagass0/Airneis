@@ -1,0 +1,561 @@
+@font-face {
+  font-family: 'Marck';
+  src: url('http://airneis.ddns.net:80/MarckScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Acme';
+  src: url('http://airneis.ddns.net:80/Acme-Regular.ttf');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-card {
+  position: relative;
+  width: 300px;
+  height: max-content;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+  box-shadow: 2px 2px 10px #ccc;
+}
+
+.card {
+  position: relative;
+  width: 600px;
+  height: max-content;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+  box-shadow: 2px 2px 10px #ccc;
+  background-color: var(--bs-card-cap-bg);
+
+}
+
+.card-header {
+  margin-bottom: 20px;
+  height: 100%;
+  border: 1px solid white !important;
+  border-radius: 10px;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.card-header .log {
+  margin: 0;
+  font-size: 24px;
+  color: black;
+}
+
+.card-connexion {
+  text-align: center;
+  margin-bottom: 20px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.card-connexion .log {
+  margin: 0;
+  font-size: 24px;
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.ConnexionTitre{
+  width: 350px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 70px;
+  font-family: 'Marck';
+
+}
+
+.logo-airneis-connexion{
+  margin-right: 20px;
+  margin-bottom: 30px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 50px;
+}
+
+
+
+/* NavBar */
+
+.NavTitre{
+  margin-left: 20px;
+  font-family: 'Marck';
+  font-weight: bold;
+  font-size: 40px ;
+  color: #ffffff;
+  }
+
+.NavTitre:hover {
+  text-shadow: 0 0 5px #e8e7e7;
+  }
+
+.NavItems{
+  align-items: center;
+}
+
+.icone-recherche {
+  width: 32px;
+}
+
+.icone-recherche:hover {
+  filter: contrast(10%);
+}
+
+.nav-bg {
+ background-color: #4e4d4d !important;
+ border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.nav-bg-footer {
+  background-color: #4e4d4d !important;
+ }
+
+.logo-airneis {
+  margin-bottom: 7px;
+  margin-top: -11px;
+  margin-left: 80px;
+  filter: saturate(200%);  
+}
+
+
+.logo-airneis:hover {
+  filter: saturate(300%);
+}
+
+.info-airneis {
+  text-align: center;
+  margin: 0;
+  font-family: "Acme";
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.footer {
+  margin-left: 80px;
+}
+
+.info-airneis p {
+  margin: 0 !important;
+}
+
+.cat {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.content-img {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .img1 {
+    margin-right: 50px;
+  }
+  
+  .img2 {
+    margin-left: 50px;
+  }
+
+  .Min-heightConteiner{
+    min-height: calc(100vh - 66px - 220px);
+  }
+
+.Min-heightConteinerPanier{
+  background-color: #e3dfdd;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 10px;
+  height: 100%;
+  padding: 30px;
+  padding-bottom: 0;
+
+}
+
+.menu-navigation {
+  position: relative;
+}
+
+.icone-menu {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0; 
+  padding:20px;
+  background-color: #2e2b2b;
+  box-shadow: 0 0 10px rgba(255, 240, 240, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0,5s ease-in-out;
+  z-index: 11;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+  }
+
+.menu.ouvert {
+  opacity: 1;
+  visibility: visible;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  display: flex;
+  padding: 5px 0;
+  color: #ffffff;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.menu a:hover {
+  color: rgb(209, 184, 115);
+  filter: saturate(100%);
+
+}
+
+.compteNav{
+  color: rgb(59, 59, 59);
+  text-decoration: none;
+}
+
+.compteNav:hover{
+  color: #e96e1d;
+}
+
+.titreConnexion{
+  transition: 1s;
+  color: black;
+}
+
+.titreConnexion:hover{
+  text-shadow: 1px 1px 1px rgb(255, 152, 61), 0 0 1em rgb(255, 190, 110), 0 0 0.2em rgb(255, 203, 139);
+}
+
+.texteacceuil{
+  transition: 1s;
+}
+
+.texteacceuil:hover{
+  text-shadow: 1px 1px 1px rgb(118, 118, 138), 0 0 1em rgb(170, 159, 145), 0 0 0.2em rgb(112, 106, 99);
+}
+
+.divArticles{
+  width: 500px;
+  margin-right: 50px;
+  height: 70vh;
+  overflow: auto;
+}
+
+.divPrixArticles{
+  width: 400px;
+  height: 25vh;
+  margin-left: 50px;
+}
+
+.divPrixArticles p{
+  margin-bottom: 25px;
+}
+
+.cgu-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Acme';
+}
+
+.cgu-title2 {
+  display: flex;
+  font-family: 'Acme';
+}
+
+.TotalPayer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ImgArticlesPanier{
+  display: flex;
+}
+
+.ImgArticlesPanier p{
+  margin-left: 20px;
+}
+
+.troisbarresMenu{
+  margin-right: 20px;
+}
+
+.ReponseFormulaire{
+  padding: 10px;
+  background-color: rgb(184, 0, 0);
+  color: white;
+  border-radius: 10px;
+}
+
+.success{
+  background-color: rgb(0, 150, 0);;
+}
+
+.error{
+  background-color: rgb(184, 0, 0);;
+}
+
+.DivAcceuil{
+  width: 350px;
+  margin-right: 50px;
+  margin: 0 auto;
+}
+
+.ContactTitre{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-family: 'Acme';
+}
+
+table,
+td{
+  border: 1px solid #333 !important;
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  border: 1px solid white !important;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Acme';
+}
+
+.tableau_contact {
+  font-size: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.articles{
+  width: 400px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  border: #2e2b2b solid 3px;
+  border-radius: 6px;
+  transition: 0.1s;
+}
+
+.img{
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border: red solid 2px;
+  border-radius: 6px;
+  transition: 0.1s;
+  padding: 10px;
+}
+
+.articles:hover{
+  border-color: rgb(196, 196, 101);
+}
+
+.articles.selected {
+  border: 3px solid rgb(255, 145, 0);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.boutonBackOfficeArticles{
+  width: 25%;
+  margin-left: 10px;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select{
+  background-color: rgb(120, 120, 188);  
+}
+
+.custom-select select {
+  width: 200px;
+  background-color: rgb(107, 107, 207);
+  outline: none;
+  border: none;
+}
+
+.form-textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+}
+
+.mes-commandes {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.commande-item {
+  margin-bottom: 10px;
+}
+
+.commande-selected .bouton-commandes {
+  background-color: #bcae8f;
+}
+
+.commande-header {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.commande-details {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bouton-commandes {
+  position: relative;
+  cursor: pointer;
+  background-color: #cfc8bcad;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.bouton-commandes .annuler-commande {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #ffffff;
+  background-color: #cf3333;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmation-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  animation: fade-in 0.3s ease;
+}
+
+.confirmation-message p {
+  margin-bottom: 10px;
+}
+
+.confirmation-message button {
+  margin-right: 10px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
